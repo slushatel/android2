@@ -1,5 +1,6 @@
 package com.example.stas.myapplication;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
@@ -16,7 +17,7 @@ import java.net.URLEncoder;
  */
 class LongOperation extends AsyncTask<String, Void, FunctionResult<String>> {
 
-    private MainActivity mainActivity;
+    private Activity mainActivity;
     private String Content;
     private String Error = null;
     private ProgressDialog Dialog = null;
@@ -25,7 +26,7 @@ class LongOperation extends AsyncTask<String, Void, FunctionResult<String>> {
     String serverText = "";
 
 
-    public LongOperation(MainActivity mainActivity, String serverText) {
+    public LongOperation(Activity mainActivity, String serverText) {
         this.mainActivity = mainActivity;
         this.serverText = serverText;
         this.Dialog = new ProgressDialog(mainActivity);
